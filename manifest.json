@@ -1,0 +1,22 @@
+{
+    "name": "PWA MALKI",
+    "short_name": "PWA Demo",
+    "lang": "en-US",
+    "start_url": "./index.html",
+    "display": "standalone",
+    "background_color": "white",
+    "theme_color": "black",
+    "orientation": "portrait-primare", 
+    "icons": [
+        {
+            "src": "./image/deling.png",
+            "type": "/image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "./image/melitta.png",
+            "type": "/image/png",
+            "sizes": "512x512"
+        }
+    ]
+}
