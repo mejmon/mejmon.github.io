@@ -22,6 +22,3 @@ self.addEventListener('fetch', function (e) {
             return response || fetch(e.request);
         }))
 })
-//hej
-//då
-//mupp
