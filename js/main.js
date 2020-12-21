@@ -13,7 +13,9 @@ async function showNotification() {
         const noti = new Notification('Hello!', {
             boyd: 'It´s me.',
             icon: 'image/simpsons.jfif'
+            //requireInteraction: true;
         });
+    
         registration.showNotification('My notification', options);
     }
 }

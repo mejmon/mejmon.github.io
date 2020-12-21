@@ -22,3 +22,15 @@ self.addEventListener('fetch', function (e) {
             return response || fetch(e.request);
         }))
 })
+
+//Register eventlistener for push event
+self.addEventListener('push', function (event) {
+    const payload = event.data ? event.data.text() : 'no payload';
+
+        event.waitUntil(
+            self.ServiceWorkerRegistration.showNotification('Mitt push-up meddelande', {
+                body: payload,
+            })
+    );
+
+});
