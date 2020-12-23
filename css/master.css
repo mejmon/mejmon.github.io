@@ -1,48 +1,92 @@
+html, body {
+    
+  width: 100%;
+  margin: 0;
+}
+
 * {
-    box-sizing: border-box;
-  }
-  
-  .flex-container {
-    display: flex;
-    flex-wrap: wrap;
-    font-size: 30px;
-    text-align: center;
-  }
-  
-  .flex-item-left {
-    background-color: #f1f1f1;
-    padding: 10px;
-    flex: 50%;
-  }
-  
-  .flex-item-right {
-    background-color: dodgerblue;
-    padding: 10px;
-    flex: 50%;
-  }
-  .box {
-    display: flex;
-    flex-flow: row wrap;
-  }
-
-
-div.polaroid {
-  width: 40%;
-  background-color: white;
-  
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  margin-bottom: 25px;
+  box-sizing: border-box;
 }
 
-div.container {
+
+img{
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  }
+
+.menu {
+  float: left;
+  padding-left: 0px;
+  width: 150%;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px; 
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+.button {
+  border: 0;
+  border-radius: 0.25rem;
+  background: #1E88E5;
+  color: white;
+  font-family: -system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  white-space: nowrap;
+  text-decoration: none;
+  padding: 0.50rem 1.0rem;
+  margin: 0.25rem; /*mellanrum mellan knapparna*/
+  cursor: pointer;
+}
+
+
+.navbar {
+  overflow: hidden;
+  background-color:#686af8;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
   text-align: center;
-  border-top: 1px solid black;
-  padding: 10px 20px;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
 }
 
-/* Responsive layout - makes a one column-layout instead of a two-column layout */
-@media (max-width: 600px) {
-    .flex-item-right, .flex-item-left {
-      flex: 100%;
-    }
-  }
+.navbar a:hover {
+  background: #9698eb;
+  color: black;
+}
+
+.main {
+  padding: 16px;
+  margin-top: 30px;
+  height: 160px;
+}
+
+.container {
+  margin: 60px 0 0 10px;
+}
