@@ -19,30 +19,30 @@
 
   <script>
 
-document.addEventListener('DOMContentLoaded', function () {
-      
-        document.getElementById("main").style.display = "block";
-       document.getElementById("hem").style.color = "black";
+    document.addEventListener('DOMContentLoaded', function () {
 
-      
-});
+      document.getElementById("main").style.display = "block";
+      document.getElementById("hem").style.color = "black";
+
+
+    });
 
     function changeContent1() {
-      
-       document.getElementById("main").style.display = "block";
-       document.getElementById("hem").style.color = "black";
-       document.getElementById("bilder").style.color = "white";
-       document.getElementById("holiday").style.display = "none";
 
-      
+      document.getElementById("main").style.display = "block";
+      document.getElementById("hem").style.color = "black";
+      document.getElementById("bilder").style.color = "white";
+      document.getElementById("holiday").style.display = "none";
+
+
     }
     function changeContent2() {
-     document.getElementById("main").style.display = "none";
-     document.getElementById("hem").style.color = "white";
-     document.getElementById("bilder").style.color = "black";
-     document.getElementById("holiday").style.display = "block";
-   
-     
+      document.getElementById("main").style.display = "none";
+      document.getElementById("hem").style.color = "white";
+      document.getElementById("bilder").style.color = "black";
+      document.getElementById("holiday").style.display = "block";
+
+
     }
   </script>
 </head>
@@ -50,37 +50,37 @@ document.addEventListener('DOMContentLoaded', function () {
 <body>
 
 
- 
-    <div class="navbar">
-      <a id="hem" onclick="changeContent1()">Hem</a>
-      <a id="bilder" onclick="changeContent2()">Semesterbilder</a>
-    </div>
-  
 
-
-<div class="container">
-  <div id="main" style="display:show">
-    <h1>
-      PWA sida
-    </h1>
-    <p>
-      Min första webbsida med <strong>PWA</strong>!
-    </p>
+  <div class="navbar">
+    <a id="hem" onclick="changeContent1()">Hem</a>
+    <a id="bilder" onclick="changeContent2()">Semesterbilder</a>
   </div>
 
-  <div id="holiday" style="display:none">
-    <div class="columns">
 
 
-      <div class="column"><img src="./image/beach.jpg"></div>
-      <div class="column"><img src="./image/beach.jpg"></div>
-      <div class="column"><img src="./image/shenzhen.jpg"></div>
-      <div class="column"><img src="./image/beach.jpg"></div>
-      <div class="column"><img src="./image/shenzhen.jpg"></div>
-      <div class="column"><img src="./image/beach.jpg"></div>
+  <div class="container">
+    <div id="main" style="display:show">
+      <h1>
+        PWA sida
+      </h1>
+      <p>
+        Min första webbsida med <strong>PWA</strong>!
+      </p>
+    </div>
+
+    <div id="holiday" style="display:none">
+      <div class="columns">
+
+
+        <div class="column"><img src="./image/beach.jpg"></div>
+        <div class="column"><img src="./image/beach.jpg"></div>
+        <div class="column"><img src="./image/shenzhen.jpg"></div>
+        <div class="column"><img src="./image/beach.jpg"></div>
+        <div class="column"><img src="./image/shenzhen.jpg"></div>
+        <div class="column"><img src="./image/beach.jpg"></div>
+      </div>
     </div>
   </div>
-</div>
 
 
   <script src="js/main.js"></script>
