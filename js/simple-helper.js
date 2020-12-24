@@ -10,4 +10,4 @@ Helper.hide = function (tag, style) {
     document.getElementById(tag).style.display="none";
     document.getElementById(style).style.color = "white";
     document.getElementById(style).style.background="#686af8";
-}
+} 
