@@ -14,51 +14,40 @@
   <link rel="apple-touch-icon" sizes="180x180" href="./image/icon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="./image/icon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="./image/icon/favicon-16x16.png">
-  <script src="./js/simple-helper.js"></script>
 
+  <script src="./js/simple-helper.js"></script>
   <script>
 
     document.addEventListener('DOMContentLoaded', function () {
+      Helper.show("main", "hem");
 
-      document.getElementById("main").style.display = "block";
-      document.getElementById("hem").style.color = "black";
 
 
     });
 
-    function changeContent1() {
+    function changeContent(id) {
+      console.log("vad är", id)
+      if (id == 'hem') {
+        Helper.show("main", "hem");
+        Helper.hide("holiday", "bilder");
 
-      document.getElementById("main").style.display = "block";
-      document.getElementById("hem").style.color = "black";
-      document.getElementById("bilder").style.color = "white";
-      document.getElementById("holiday").style.display = "none";
+      } else {
+        Helper.hide("main", "hem");
+        Helper.show("holiday", "bilder");
 
-
-    }
-    function changeContent2() {
-      document.getElementById("main").style.display = "none";
-      document.getElementById("hem").style.color = "white";
-      document.getElementById("bilder").style.color = "black";
-      document.getElementById("holiday").style.display = "block";
-
-
+      }
     }
   </script>
 </head>
 
 <body>
-
-
-
   <div class="navbar">
-    <a id="hem" onclick="changeContent1()">Hem</a>
-    <a id="bilder" onclick="changeContent2()">Semesterbilder</a>
+    <a id="hem" onclick="changeContent('hem')">Hem</a>
+    <a id="bilder" onclick="changeContent('bilder')">Semesterbilder</a>
   </div>
 
-
-
   <div class="container">
-    <div id="main" style="display:show">
+    <div id="main" style="display:none">
       <h1>
         PWA sida
       </h1>
