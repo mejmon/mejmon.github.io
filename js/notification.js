@@ -18,7 +18,6 @@ async function showNotification() {
 showNotification();
 
 */
-navigator.serviceWorker.register('serviceWorker.js');
 
 function showNotification() {
   Notification.requestPermission(function(result) {
