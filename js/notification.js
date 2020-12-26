@@ -1,4 +1,4 @@
-
+/*
 async function showNotification() {
     const result = await Notification.requestPermission();
     if (result === 'granted') {
@@ -17,3 +17,20 @@ async function showNotification() {
 }
 showNotification();
 
+*/
+navigator.serviceWorker.register('serviceWorker.js');
+
+function showNotification() {
+  Notification.requestPermission(function(result) {
+    if (result === 'granted') {
+      navigator.serviceWorker.ready.then(function(registration) {
+        registration.showNotification('Vibration Sample', {
+          body: 'Buzz! Buzz!',
+          icon: 'image/simpsons.jfif',
+          vibrate: [200, 100, 200, 100, 200, 100, 200],
+          tag: 'vibration-sample'
+        });
+      });
+    }
+  });
+}
