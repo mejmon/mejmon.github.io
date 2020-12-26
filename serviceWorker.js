@@ -4,6 +4,7 @@ const filesToCache = [
     './index.html',
     './js/main.js',
     './js/notification.js',
+    './js/simple-helper.js',
     './image/shenzhen.jpg',
     './image/beach.jpg',
     './image/simpsons.jfif',
@@ -15,9 +16,9 @@ const filesToCache = [
   ]
   
 
-  const staticCacheName = 'pages-cache-v8';
+  const staticCacheName = 'pages-cache-v10';
   self.addEventListener('install', event => {
-    console.log('Attempting to install service worker and cache static assets');
+    console.log('installera service worker och cache');
     event.waitUntil(
       caches.open(staticCacheName)
       .then(cache => {
@@ -33,10 +34,10 @@ const filesToCache = [
       caches.match(event.request)
       .then(response => {
         if (response) {
-          console.log('Found ', event.request.url, ' in cache');
+          console.log('Hittade ', event.request.url, ' i cache');
           return response;
         }
-        console.log('Network request for ', event.request.url);
+        console.log('Nätverk begäran/request ', event.request.url);
         return fetch(event.request)
   
         // TODO 4 - Add fetched files to the cache
@@ -60,3 +61,5 @@ self.addEventListener('push', function (event) {
     );
 
 });
+
+
