@@ -16,7 +16,7 @@ const filesToCache = [
   ]
   
 
-  const staticCacheName = 'pages-cache-v10';
+  const staticCacheName = 'pages-cache-v11';
   self.addEventListener('install', event => {
     console.log('installera service worker och cache');
     event.waitUntil(
@@ -56,6 +56,7 @@ self.addEventListener('push', function (event) {
 
         event.waitUntil(
             self.ServiceWorkerRegistration.showNotification('Mitt push-up meddelande', {
+            
                 body: payload,
             })
     );
